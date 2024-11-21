@@ -1,0 +1,70 @@
+/* Общие стили */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black; /* Черный фон для всей страницы */
+  color: white;
+  font-family: Arial, sans-serif;
+  
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 1;
+  display: flex;
+  text-align: center;
+}
+
+.text {
+  font-size: 7vw;
+  line-height: 1.6;
+  white-space: nowrap;;
+  position: relative;
+  margin: 0;
+  padding-right: 10px;
+  background-color: black;
+  z-index: 2;
+}
+
+/* Стили для маски текста, чтобы видео было видно только в этих областях */
+.video-mask {
+  color: transparent; /* Делает текст прозрачным */
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+.video-mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Видео на фоне */
+}
+
+/* Дополнительный стиль для черного фона вокруг маски */
+body {
+  background-color: black;
+}
